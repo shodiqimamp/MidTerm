@@ -3,7 +3,7 @@
 Description : This project was made to fulfill the Midterm Project Fullstack Engineer Track assignment from the GIGIH 3.0 program
 
 ## Database Structure
-The architectural database used in this project is MongoDB, this project have 3 Collection, videos, comments, and products.
+The architectural database used in this project is `MongoDB`, this project have 3 Collection, videos, comments, and products.
 
 ### Videos Collection
 ```
