@@ -2,6 +2,12 @@
 
 Description : This project was made to fulfill the Midterm Project Fullstack Engineer Track assignment from the GIGIH 3.0 program
 
+## Table Of Content
+* [Database Structure](#database-structure)
+* [API Structure](#api-structure)
+* [API Request Response List](#api-request-response-list)
+* [How To Run](#how-to-run-in-local)
+
 ## Database Structure
 The architectural database used in this project is `MongoDB`, this project have 3 Collection, videos, comments, and products.
 
