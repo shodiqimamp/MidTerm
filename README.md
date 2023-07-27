@@ -1,4 +1,4 @@
-# MidTerm Project
+# MidTerm Project (Backend Only)
 
 ### Description : This project was made to fulfill the Midterm Project Fullstack Engineer Track assignment from the GIGIH 3.0 program
 
