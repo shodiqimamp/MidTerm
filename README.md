@@ -1,6 +1,6 @@
-# MidTerm Project (Backend Only)
+## MidTerm Project (Backend Only)
 
-### Description : This project was made to fulfill the Midterm Project Fullstack Engineer Track assignment from the GIGIH 3.0 program
+Description : This project was made to fulfill the Midterm Project Fullstack Engineer Track assignment from the GIGIH 3.0 program
 
 ## Database Structure
 The architectural database used in this project is MongoDB, this project have 3 Collection, videos, comments, and products.
@@ -65,6 +65,8 @@ POST: /videos/:videoId/comments | `controller.addComment`
 ## API Request Response List
 
 ### GET: /product
+
+----
 Return all videos from database
 
 * **URL Params**  
