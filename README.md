@@ -5,8 +5,14 @@ Description : This project was made to fulfill the Midterm Project Fullstack Eng
 ## Table Of Content
 * [Database Structure](#database-structure)
 * [API Structure](#api-structure)
+    * [Video API]()
+    * [Product API]()
+    * [Comment API]()
 * [API Request Response List](#api-request-response-list)
 * [How To Run](#how-to-run-in-local)
+    * [Set Up The Project](#1-set-up-the-project)
+    * [Set Up The Database](#2-set-up-the-database)
+    * [Run The Project](#3-run-the-project)
 
 ## Database Structure
 The architectural database used in this project is `MongoDB`, this project have 3 Collections, videos, comments, and products.
@@ -379,6 +385,6 @@ Creates a new Comment and returns the new object.
     "videoId": "enter id Video"
     }' http://localhost:3000/api/videos/:videoId/comments
   ```
-  * Get all data Videos from Database with this API link `http://localhost:3000/api/videos/:videoId/comments` on your browser or postman.
+  * Get all data Comments Video from Database with this API link `http://localhost:3000/api/videos/:videoId/comments` on your browser or postman.
   * Get specific data Videos by Id from Database with this API link `http://localhost:3000/api/videos/:videoId` on your browser or postman and dont forget to change param `:videoId`.
     
