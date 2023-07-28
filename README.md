@@ -324,3 +324,16 @@ Creates a new Comment and returns the new object.
   
 ## How To Run In Local
 ### 1. Set Up The Project
+  * After download or clone this project, open the project folder and run this commands in terminal/cmd to install the dependencies
+    ```
+    npm install
+    ```
+  * Use this command to run this project
+    ```
+    npm run dev
+    ```
+### 2. Set Up The Database
+  * Before you run the project, you need to connect and create the database and collections, you can see the database structure above or [Click Here](#database-structure).
+  * Create `.env` file and put this code `DATABASE_URL = mongodb://localhost:27017/yourDatabaseName`, dont forget to change the database name with your database name.
+    
+### 2. Run The Project
