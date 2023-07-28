@@ -342,7 +342,7 @@ Creates a new Comment and returns the new object.
   * Before you run the project, you need to connect and create the **database** and **collections**, you can see the database structure above or [Click Here](#database-structure).
   * Create `.env` file and put this code `DATABASE_URL = mongodb://localhost:27017/yourDatabaseName`, dont forget to change the database name with your database name.
     
-### 2. Run The Project
+### 3. Run The Project
   * Run the project with this command.
     ```
     npm run dev
@@ -367,11 +367,18 @@ Creates a new Comment and returns the new object.
     "title": "Judul Video",
     "youtubeUrl": "https://www.youtube.com/",
     "thumbnailUrl": "https://example.com/thumbnail.jpg",
-    "productId": "enter id product"
+    "productId": "enter id Product"
     }' http://localhost:3000/api/videos
     ```
   * Get all data Videos from Database with this API link `http://localhost:3000/api/videos` on your browser or postman.
+  * Add data Comment to Database with this API Link `http://localhost:3000/api/videos/:videoId/comments`, then enter this command in your terminal/bash/cmd. Dont forget to change param `:videoId` with `id` and value in `videoId` field with `_id` from video collection.
+  ```
+    curl -X POST -H "Content-Type: application/json" -d '{
+    "name": "My Name",
+    "comment": "This Comment",
+    "videoId": "enter id Video"
+    }' http://localhost:3000/api/videos/:videoId/comments
+  ```
+  * Get all data Videos from Database with this API link `http://localhost:3000/api/videos/:videoId/comments` on your browser or postman.
   * Get specific data Videos by Id from Database with this API link `http://localhost:3000/api/videos/:videoId` on your browser or postman and dont forget to change param `:videoId`.
-    
-    
     
