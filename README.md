@@ -106,12 +106,16 @@ Return all videos from database
 ### POST: /product
 
 ----
-Return all videos from database
+Creates a new Product and returns the new object.
 
 * **URL Params**  
   None
 * **Data Params**  
-  None
+  ```
+  title: String
+  price: Number
+  link: String
+  ```
 * **Headers**  
   Content-Type: application/json
 * **Success Response:** 
@@ -122,15 +126,10 @@ Return all videos from database
     message,
     data: [
         {
-            _id,
-            title,
-            thumbnailUrl,
-            youtubeUrl,
-            productId,
-            comments: [
-                commentId,
-                commentId,
-            ],
+            productId
+            title
+            price
+            link
         }
     ]
   }
