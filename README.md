@@ -103,6 +103,38 @@ Return all videos from database
   }
   ```
 
+### POST: /product
+
+----
+Return all videos from database
+
+* **URL Params**  
+  None
+* **Data Params**  
+  None
+* **Headers**  
+  Content-Type: application/json
+* **Success Response:** 
+  - Code: 200
+  - Content: 
+  ```
+  {
+    message,
+    data: [
+        {
+            _id,
+            title,
+            thumbnailUrl,
+            youtubeUrl,
+            productId,
+            comments: [
+                commentId,
+                commentId,
+            ],
+        }
+    ]
+  }
+  ```
 
 
 
