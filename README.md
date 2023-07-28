@@ -358,7 +358,7 @@ Creates a new Comment and returns the new object.
     http://localhost:3000/api/video
     ```
   * OPTIONAL: you can run the project with postman, you can check this project postman API documentations [Here](https://www.postman.com/shodiqimamp/workspace/gigih-3-0/collection/13102716-fce5fda1-d33c-419d-be3a-329055bc5e3b?action=share&creator=13102716).
-  * Add data Product to Database with this API link `http://localhost:3000/api/product`, then enter this command in your terminal/bash/cmd.
+  * Add Product data to database with this POST API `http://localhost:3000/api/product` using this command in your terminal/bash/cmd.
     ```
     curl -X POST -H "Content-Type: application/json" -d '{
     "title": "Judul Product",
@@ -367,7 +367,7 @@ Creates a new Comment and returns the new object.
     }' http://localhost:3000/api/product
     ```
   * Get all data Products from Database with this API link `http://localhost:3000/api/product` on your browser or postman.
-  * Add data Video to Database with this API Link `http://localhost:3000/api/videos`, then enter this command in your terminal/bash/cmd. Don't forget to change value in `productId` field with `_id` from Product Collection.
+  * Add Video data to database with this POST API `http://localhost:3000/api/videos` using this command in your terminal/bash/cmd. Don't forget to change value in `productId` field with `_id` from Product Collection.
     ```
     curl -X POST -H "Content-Type: application/json" -d '{
     "title": "Judul Video",
@@ -377,7 +377,8 @@ Creates a new Comment and returns the new object.
     }' http://localhost:3000/api/videos
     ```
   * Get all data Videos from Database with this API link `http://localhost:3000/api/videos` on your browser or postman.
-  * Add data Comment to Database with this API Link `http://localhost:3000/api/videos/:videoId/comments`, then enter this command in your terminal/bash/cmd. Dont forget to change param `:videoId` with `id` and value in `videoId` field with `_id` from video collection.
+  * Get specific data Video by Id from Database with this API link `http://localhost:3000/api/videos/:videoId` on your browser or postman and dont forget to change param `:videoId`.
+  * Add Comment data to database with this POST API `http://localhost:3000/api/videos/:videoId/comments` using this command in your terminal/bash/cmd. Dont forget to change param `:videoId` and value in `videoId` field with `_id` from video collection.
   ```
     curl -X POST -H "Content-Type: application/json" -d '{
     "name": "My Name",
@@ -386,5 +387,5 @@ Creates a new Comment and returns the new object.
     }' http://localhost:3000/api/videos/:videoId/comments
   ```
   * Get all data Comments Video from Database with this API link `http://localhost:3000/api/videos/:videoId/comments` on your browser or postman.
-  * Get specific data Videos by Id from Database with this API link `http://localhost:3000/api/videos/:videoId` on your browser or postman and dont forget to change param `:videoId`.
+  * Get specific data Video by Id from Database with this API link `http://localhost:3000/api/videos/:videoId` on your browser or postman and dont forget to change param `:videoId`.
     
