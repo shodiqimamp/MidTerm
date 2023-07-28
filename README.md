@@ -322,5 +322,5 @@ Creates a new Comment and returns the new object.
   - Code: 500
   - Content: { error: "Internal Server Error" }
   
-## How To Run
+## How To Run In Local
 ### 1. Set Up The Project
