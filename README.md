@@ -5,9 +5,9 @@ Description : This project was made to fulfill the Midterm Project Fullstack Eng
 ## Table Of Content
 * [Database Structure](#database-structure)
 * [API Structure](#api-structure)
-    * [Video API]()
-    * [Product API]()
-    * [Comment API]()
+    * [Product API](#1-product-api)
+    * [Video API](#2-video-api)
+    * [Comment API](#3-comment-api)
 * [API Request Response List](#api-request-response-list)
 * [How To Run](#how-to-run-in-local)
     * [Set Up The Project](#1-set-up-the-project)
