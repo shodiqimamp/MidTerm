@@ -9,9 +9,9 @@ const app = express();
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 
-const videoRoutes = require("./routes/video.router");
-const commentRoutes = require("./routes/comment.router");
-const productRoutes = require("./routes/product.router");
+const videoRoutes = require("./routes/video.route");
+const commentRoutes = require("./routes/comment.route");
+const productRoutes = require("./routes/product.route");
 
 mongoose
   .connect(mongoString)
