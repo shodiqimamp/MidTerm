@@ -171,8 +171,10 @@ Return all videos from database
 ----
 Return specific video from database
 
-* **URL Params**  
-  None
+* **URL Params**
+  ``` 
+  :id
+  ```
 * **Data Params**  
   None
 * **Headers**  
@@ -253,7 +255,9 @@ Creates a new Video and returns the new object.
 Return comment with specified Video Id from database
 
 * **URL Params**  
-  None
+  ```
+  :videoId
+  ```
 * **Data Params**  
   None
 * **Headers**  
@@ -289,7 +293,9 @@ Return comment with specified Video Id from database
 Creates a new Comment and returns the new object.
 
 * **URL Params**  
-  None
+  ```
+  :videoId
+  ```
 * **Data Params**  
   ```
   name: String,
@@ -337,13 +343,35 @@ Creates a new Comment and returns the new object.
   * Create `.env` file and put this code `DATABASE_URL = mongodb://localhost:27017/yourDatabaseName`, dont forget to change the database name with your database name.
     
 ### 2. Run The Project
-  * Run the project with this command
+  * Run the project with this command.
     ```
     npm run dev
     ```
-  * Open your browser and enter link
+  * Open your browser and enter link, see the API Structure [Here](#api-structure).
     ```
-    http:://localhost:3000/api/video
+    http://localhost:3000/api/video
     ```
-  * OPTIONAL: you can run the project with postman, you can check my postman API documentations [Here](https://www.postman.com/shodiqimamp/workspace/gigih-3-0/collection/13102716-fce5fda1-d33c-419d-be3a-329055bc5e3b?action=share&creator=13102716).
-  * 
+  * OPTIONAL: you can run the project with postman, you can check this project postman API documentations [Here](https://www.postman.com/shodiqimamp/workspace/gigih-3-0/collection/13102716-fce5fda1-d33c-419d-be3a-329055bc5e3b?action=share&creator=13102716).
+  * Add data Product to Database with this API link `http://localhost:3000/api/product`, then enter this command in your terminal/bash/cmd.
+    ```
+    curl -X POST -H "Content-Type: application/json" -d '{
+    "title": "Judul Product",
+    "price": 500000,
+    "link": "https://www.tokopedia.com/"
+    }' http://localhost:3000/api/product
+    ```
+  * Get all data Products from Database with this API link `http://localhost:3000/api/product` on your browser or postman.
+  * Add data Video to Database with this API Link `http://localhost:3000/api/videos`, then enter this command in your terminal/bash/cmd. Don't forget to change value in `productId` field with `_id` from Product Collection.
+    ```
+    curl -X POST -H "Content-Type: application/json" -d '{
+    "title": "Judul Video",
+    "youtubeUrl": "https://www.youtube.com/",
+    "thumbnailUrl": "https://example.com/thumbnail.jpg",
+    "productId": "enter id product"
+    }' http://localhost:3000/api/videos
+    ```
+  * Get all data Videos from Database with this API link `http://localhost:3000/api/videos` on your browser or postman.
+  * Get specific data Videos by Id from Database with this API link `http://localhost:3000/api/videos/:videoId` on your browser or postman and dont forget to change param `:videoId`.
+    
+    
+    
