@@ -89,15 +89,10 @@ Return all videos from database
     message,
     data: [
         {
-            _id,
-            title,
-            thumbnailUrl,
-            youtubeUrl,
-            productId,
-            comments: [
-                commentId,
-                commentId,
-            ],
+          _id,
+          title,
+          price,
+          link,
         }
     ]
   }
@@ -134,6 +129,198 @@ Creates a new Product and returns the new object.
     ]
   }
   ```
+* **Error Response:**
+  - Code: 500
+  - Content: { error: "Internal Server Error" }
+  
+### GET: /videos
 
+----
+Return all videos from database
 
+* **URL Params**  
+  None
+* **Data Params**  
+  None
+* **Headers**  
+  Content-Type: application/json
+* **Success Response:** 
+  - Code: 200
+  - Content: 
+  ```
+  {
+    message,
+    data: [
+        {
+            _id,
+            title,
+            thumbnailUrl,
+            youtubeUrl,
+            productId,
+            comments: [
+                commentId,
+                commentId,
+            ],
+        }
+    ]
+  }
+  ```
+  
+### GET: /videos/:id
 
+----
+Return specific video from database
+
+* **URL Params**  
+  None
+* **Data Params**  
+  None
+* **Headers**  
+  Content-Type: application/json
+* **Success Response:** 
+  - Code: 200
+  - Content: 
+  ```
+  {
+    message,
+    data: [
+        {
+          _id,
+          title,
+          thumbnailUrl,
+          youtubeUrl,
+          products: [
+            {
+                  _id,
+                  title,
+                  price,
+                  link,
+            }
+          ],
+        comments: [
+            {
+                  _id,
+                  name,
+                  comment,
+                  videoId,
+                  createdAt,
+            }
+          ]
+        }
+    ]
+  }
+  ```
+  
+### POST: /videos
+
+----
+Creates a new Video and returns the new object.
+
+* **URL Params**  
+  None
+* **Data Params**  
+  ```
+  title: String,
+  youtubeUrl: String,
+  thumbnailUrl: String,
+  productId: [ObjectId],
+  ```
+* **Headers**  
+  Content-Type: application/json
+* **Success Response:** 
+  - Code: 200
+  - Content: 
+  ```
+  {
+    message,
+    data: [
+        {
+            videoId,
+            title,
+            youtubeUrl,
+            thumbnailUrl,
+            productId": []
+        }
+    ]
+  }
+  ```
+* **Error Response:**
+  - Code: 500
+  - Content: { error: "Internal Server Error" }
+  
+### GET: /videos/:videoId/comments
+----
+Return comment with specified Video Id from database
+
+* **URL Params**  
+  None
+* **Data Params**  
+  None
+* **Headers**  
+  Content-Type: application/json
+* **Success Response:** 
+  - Code: 200
+  - Content: 
+  ```
+  {
+    message,
+    data: [
+        {
+            _id,
+            name,
+            comment,
+            videoId : {
+              _id,
+              title,
+              thumbnailUrl,
+              youtubeUrl,
+              productId,
+              comments,
+            },
+            createdAt,
+        }
+    ]
+  }
+  ```
+  
+### POST: /videos/:videoId/comments
+
+----
+Creates a new Comment and returns the new object.
+
+* **URL Params**  
+  None
+* **Data Params**  
+  ```
+  name: String,
+  comment: String,
+  createdAt:Date,
+  videoId: {
+    ObjectId,
+  },
+  ```
+* **Headers**  
+  Content-Type: application/json
+* **Success Response:** 
+  - Code: 200
+  - Content: 
+  ```
+  {
+    message,
+    data: [
+        {
+            name,
+            comment,
+            videoId,
+            _id,
+            createdAt,
+        }
+    ]
+  }
+  ```
+* **Error Response:**
+  - Code: 500
+  - Content: { error: "Internal Server Error" }
+  
+## How To Run
+### 1. Set Up The Project
