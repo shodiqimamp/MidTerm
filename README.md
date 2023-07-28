@@ -15,9 +15,9 @@ Description : This project was made to fulfill the Midterm Project Fullstack Eng
     * [Run The Project](#3-run-the-project)
 
 ## Database Structure
-The architectural database used in this project is `MongoDB`, this project have 3 Collections, videos, comments, and products.
+The architectural database used in this project is `MongoDB`, this project have 3 Collections, video, comment, and product.
 
-### Videos Collection
+### Video Collection
 ```
 {
   title: String
@@ -28,7 +28,7 @@ The architectural database used in this project is `MongoDB`, this project have 
 },
 ```
 
-### Comments Collection
+### Comment Collection
 ```
 {
   name: String
@@ -37,7 +37,7 @@ The architectural database used in this project is `MongoDB`, this project have 
   videoId: String
 }
 ```
-### Products Collection
+### Product Collection
 ```
  {
   title: String
