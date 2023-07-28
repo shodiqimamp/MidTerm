@@ -9,7 +9,7 @@ Description : This project was made to fulfill the Midterm Project Fullstack Eng
 * [How To Run](#how-to-run-in-local)
 
 ## Database Structure
-The architectural database used in this project is `MongoDB`, this project have 3 Collection, videos, comments, and products.
+The architectural database used in this project is `MongoDB`, this project have 3 Collections, videos, comments, and products.
 
 ### Videos Collection
 ```
@@ -333,7 +333,17 @@ Creates a new Comment and returns the new object.
     npm run dev
     ```
 ### 2. Set Up The Database
-  * Before you run the project, you need to connect and create the database and collections, you can see the database structure above or [Click Here](#database-structure).
+  * Before you run the project, you need to connect and create the **database** and **collections**, you can see the database structure above or [Click Here](#database-structure).
   * Create `.env` file and put this code `DATABASE_URL = mongodb://localhost:27017/yourDatabaseName`, dont forget to change the database name with your database name.
     
 ### 2. Run The Project
+  * Run the project with this command
+    ```
+    npm run dev
+    ```
+  * Open your browser and enter link
+    ```
+    http:://localhost:3000/api/video
+    ```
+  * OPTIONAL: you can run the project with postman, you can check my postman API documentations [Here](https://www.postman.com/shodiqimamp/workspace/gigih-3-0/collection/13102716-fce5fda1-d33c-419d-be3a-329055bc5e3b?action=share&creator=13102716).
+  * 
